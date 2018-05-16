@@ -18,6 +18,10 @@ sudo apt-get update
 sudo apt-get install g++ openmpi-bin openmpi-doc libopenmpi-dev make python-vtk python-tk
 sudo pip install tqdm keras tensorflow matplotlib
 ```
+#For miniconda3 and anaconda3
+```
+conda install tensorflow keras tqdm
+```
 
 Note, if you want the gpu version of Tensorflow you need to install `tensorflow-gpu` and follow the instructions [here](https://www.tensorflow.org/install/install_linux). Also, depending how python vtk is install it can cause problems. If the above instructions are followed without a prior install of vtk then there should be no problem.
 

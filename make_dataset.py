@@ -1,10 +1,12 @@
-
+# For python3.6 users in Ubuntu 16.04 with tqdm, keras and tensorflow installed via conda3
 import os
 import numpy as np
 import xml.etree.cElementTree as ET
 from tqdm import *
 import subprocess
-from Queue import Queue
+#-from Queue import Queue
+# https://stackoverflow.com/questions/33432426/importerror-no-module-named-queue
+from queue import Queue
 from threading import Thread
  
 # number of simulations
@@ -26,6 +28,11 @@ def worker():
       simulation_queue.task_done()
 
 # make thread
+# https://stackoverflow.com/questions/15014310/why-is-there-no-xrange-function-in-python3
+def xrange(x):
+
+    return iter(range(x))
+
 for i in xrange(10):
   t = Thread(target=worker)
   t.daemon = True

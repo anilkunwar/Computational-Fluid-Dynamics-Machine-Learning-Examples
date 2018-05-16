@@ -18,6 +18,7 @@ sudo apt-get update
 sudo apt-get install g++ openmpi-bin openmpi-doc libopenmpi-dev make python-vtk python-tk
 sudo pip install tqdm keras tensorflow matplotlib
 ```
+#Alternatively,
 #For miniconda3 and anaconda3
 ```
 conda install tensorflow keras tqdm
